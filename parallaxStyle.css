@@ -1,0 +1,95 @@
+* {    
+   margin: 0px;
+   padding: 0px;
+
+}
+#wrapper {
+    height: 100vh;   
+    overflow-x: hidden;  /* x direction me move nahi kare mouse or keypad dts use this and take hidden */
+    overflow-y: auto;     /* y direection me scroll ho top to bottom mouse therefor choose auto*/
+    perspective: 10px;    /* its for 3d effect */
+}
+.container {
+    position: relative;    /* give position realative coz absolute foreground, background ko isme daalna hai*/
+    display: flex;         /* flex use coz item foreground ko centre me rakhna hai so we use justify content and align item*/
+    justify-content: center;     
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;        /* z index here used for background image k upar foreground men wala image aa jayega*/ 
+} 
+h1 {
+    position: absolute;  /* ITS USE FOR ADVENTURE TIME ! HEADING K LIYE*/
+    background-color: whitesmoke;
+    top: 7rem;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px rgba(228, 215, 215, 0.819)
+    
+}
+.background {
+    transform: translateZ(-40px) scale(5);  
+      /* translate z is used backround ko z axis me dur krne k liye screen se ,
+    transfrom is use for 3d parallax effect 
+    scale i s used for increase size of background after goes to dur from eye , just remove scale and see 
+    difference */
+}
+.foreground {
+    transform: translateZ(-20px) scale(2);
+}
+
+.background , .foreground {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    z-index: -1;     /*by z idex -1 Adventure text background, foreground (man image) k upar aa jayega */
+}
+
+section {
+    background-color: hwb(0 0% 100% / 0.871);
+    color: white;
+    padding: 3rem 0;
+
+}
+
+.text {            /*its for paragraph text */
+    font-size: 40%;
+    color:white;
+    padding:20px;
+    margin:5px;
+}
+ 
+.secheading {       /* its for Adventure Time word */
+    font-size: 5rem;
+    color:white;
+    
+}
+
+.bg {                     /*bg is used for image of cycling. position is realative coz iske upar paragraph overlap karana hai*/
+    position: relative;
+    width:100%;
+    background-attachment: fixed;   /* background attachment used coz image fixed hai image is not moving when u scroll*/
+    height: 500px;
+    background-position: center;    /* image comes in centre*/
+    background-size: cover;          /* ache se image adjust ho jayega cover ho jayega*/
+}
+.desc {
+    position: absolute;
+    background-color: white;
+    color:black;
+    padding: 0.5rem 2.5rem;
+    top:50%;
+    left:40%;
+    
+}
+.bg1 {
+    background-image: url(./All_images/sport-1.jpg);
+}
+
+.bg2 {
+    background-image: url(./All_images/sport-2.jpg);
+}
+
+.bg3 {
+    background-image: url(./All_images/sport-3.jpg);
+}
